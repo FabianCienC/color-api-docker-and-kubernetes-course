@@ -7,7 +7,7 @@ const { apiRouter } = require("./routes/api");
 const { rootRouter } = require("./routes/root");
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 
 const delay_startup = process.env.DELAY_STARTUP === "true";
