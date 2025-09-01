@@ -45,14 +45,14 @@ apiRouter.post("/color/:key", async (req, res) => {
     const { value } = req.body;
 
     await saveColor({ key, value });
-    return res.sendStatus(201).send({ key, value });
+    return res.send(201).send({ key, value });
 
 });
 
 apiRouter.delete("/color/:key", async (req, res) => {
     const { key } = req.params;
 
-    await deleteColor ({ key, value });
+    await deleteColor ({ key });
     return res.sendStatus(204);
 
 });

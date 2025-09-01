@@ -29,7 +29,7 @@ const saveColor = async ({ key, value }) => {
 const getColor = async ({ key, strict = false }) => {
     let color = await Color.findOne({ key });
 
-    if (string && !color) {
+    if (strict && !color) {
         return undefined;
     }
 
